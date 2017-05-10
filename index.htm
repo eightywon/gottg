@@ -1,0 +1,180 @@
+<html>
+ <head>
+  <meta name="viewport" content="width=device-width, initial-scale=0.38">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script type="text/javascript">
+   $(document).ready(function($) {
+
+    //show hide houses
+    $("#showBar").click(function() {
+     $(".bar").toggle();
+    });
+    $("#showGre").click(function() {
+   	 $(".gre").toggle();
+    });
+    $("#showLan").click(function() {
+   	 $(".lan").toggle();
+    });
+    $("#showMar").click(function() {
+   	 $(".mar").toggle();
+    });
+    $("#showSta").click(function() {
+   	 $(".sta").toggle();
+    });
+    $("#showTyr").click(function() {
+   	 $(".tyr").toggle();
+    });
+
+    //toggle Xs per card when clicked/tapped
+    $('[id^=bar]').on("tap",function (event) {
+     event.preventDefault();
+	 $(this).children('div').toggle();
+    });
+    $('[id^=gre]').on("tap",function (event) {
+	 event.preventDefault();
+	 $(this).children('div').toggle();
+    });
+    $('[id^=lan]').on("tap",function (event) {
+	 event.preventDefault();
+	 $(this).children('div').toggle();
+    });
+    $('[id^=mar]').on("tap",function (event) {
+	 event.preventDefault();
+	 $(this).children('div').toggle();
+    });
+    $('[id^=sta]').on("tap",function (event) {
+	 event.preventDefault();
+	 $(this).children('div').toggle();
+    });
+    $('[id^=tyr]').on("tap",function (event) {
+	 event.preventDefault();
+	 $(this).children('div').toggle();
+    });
+
+    //clear house card Xs when clicking card back for that house
+    $('#b0').on("tap",function(event) {
+     event.preventDefault();
+	 $('[id^=bar]').children('div').css('display','none');
+    });
+    $('#g0').on("tap",function(event) {
+     event.preventDefault();
+	 $('[id^=gre]').children('div').css('display','none');
+    });
+    $('#l0').on("tap",function(event) {
+     event.preventDefault();
+	 $('[id^=lan]').children('div').css('display','none');
+    });
+    $('#m0').on("tap",function(event) {
+     event.preventDefault();
+	 $('[id^=mar]').children('div').css('display','none');
+    });
+    $('#s0').on("tap",function(event) {
+     event.preventDefault();
+	 $('[id^=sta]').children('div').css('display','none');
+    });
+    $('#t0').on("tap",function(event) {
+     event.preventDefault();
+	 $('[id^=tyr]').children('div').css('display','none');
+    });
+
+   });
+  </script>
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <style type="text/css">
+   .cont {
+    position: relative;
+   }
+   .image-overlay {
+    width: 223px;
+    height: 355px;
+    background-image: url("x.png");
+    z-index: 1;
+    position: absolute;
+    top: 0em;
+    display:none;
+   }
+  </style>
+ </head>
+ <body>
+  <div style="width=100%; overflow:auto">
+  <table>
+   <tr>
+    <td colspan=8><H1>Refresh to reset all<br />Tap back of house card to reset that house</H1></td>
+   </tr>
+   <tr>
+    <td colspan=8>
+     <form><fieldset data-role="controlgroup" data-type="horizontal">
+      <input type="checkbox" name="showBar" id='showBar' checked><label for="showBar">Baratheon</label>
+      <input type="checkbox" name="showGre" id='showGre' checked><label for="showGre">Greyjoy</label>
+      <input type="checkbox" name="showLan" id='showLan' checked><label for="showLan">Lannister</label>
+      <input type="checkbox" name="showMar" id='showMar' checked><label for="showMar">Martell</label>
+      <input type="checkbox" name="showSta" id='showSta' checked><label for="showSta">Stark</label>
+      <input type="checkbox" name="showTyr" id='showTyr' checked><label for="showTyr">Tyrell</label>
+     </fieldset></form>
+    </td>
+   </tr>
+   <tr class="bar">
+    <td><div id="b0"><img src="b0.png" /></div></td>
+    <td><div class="cont" id="bar1"><img src="b1.png" /><div class="image-overlay"></div></div></td>
+    <td><div class="cont" id="bar2"><img src="b2.png" /><div class="image-overlay"></div></div></td>
+    <td><div class="cont" id="bar3"><img src="b3.png" /><div class="image-overlay"></div></div></td>
+    <td><div class="cont" id="bar4"><img src="b4.png" /><div class="image-overlay"></div></div></td>
+    <td><div class="cont" id="bar5"><img src="b5.png" /><div class="image-overlay"></div></div></td>
+    <td><div class="cont" id="bar6"><img src="b6.png" /><div class="image-overlay"></div></div></td>
+    <td><div class="cont" id="bar7"><img src="b7.png" /><div class="image-overlay"></div></div></td>
+   </tr>
+   <tr class="gre">
+    <td><div id="g0"><img src="g0.png" /></div></td>
+     <td><div class="cont" id="gre1"><img src="g1.png" /><div class="image-overlay"></div></div></td>
+     <td><div class="cont" id="gre2"><img src="g2.png" /><div class="image-overlay"></div></div></td>
+     <td><div class="cont" id="gre3"><img src="g3.png" /><div class="image-overlay"></div></div></td>
+     <td><div class="cont" id="gre4"><img src="g4.png" /><div class="image-overlay"></div></div></td>
+     <td><div class="cont" id="gre5"><img src="g5.png" /><div class="image-overlay"></div></div></td>
+     <td><div class="cont" id="gre6"><img src="g6.png" /><div class="image-overlay"></div></div></td>
+     <td><div class="cont" id="gre7"><img src="g7.png" /><div class="image-overlay"></div></div></td>
+   </tr>
+   <tr class="lan">
+    <td><div id="l0"><img src="l0.png" /></div></td>
+    <td><div class="cont" id="lan1"><img src="l1.png" /><div class="image-overlay"></div></div></td>
+    <td><div class="cont" id="lan2"><img src="l2.png" /><div class="image-overlay"></div></div></td>
+    <td><div class="cont" id="lan3"><img src="l3.png" /><div class="image-overlay"></div></div></td>
+    <td><div class="cont" id="lan4"><img src="l4.png" /><div class="image-overlay"></div></div></td>
+    <td><div class="cont" id="lan5"><img src="l5.png" /><div class="image-overlay"></div></div></td>
+    <td><div class="cont" id="lan6"><img src="l6.png" /><div class="image-overlay"></div></div></td>
+    <td><div class="cont" id="lan7"><img src="l7.png" /><div class="image-overlay"></div></div></td>
+   </tr>
+   <tr class="mar">
+    <td><div id="m0"><img src="m0.png" /></div></td>
+    <td><div class="cont" id="mar1"><img src="m1.png" /><div class="image-overlay"></div></div></td>
+    <td><div class="cont" id="mar2"><img src="m2.png" /><div class="image-overlay"></div></div></td>
+    <td><div class="cont" id="mar3"><img src="m3.png" /><div class="image-overlay"></div></div></td>
+    <td><div class="cont" id="mar4"><img src="m4.png" /><div class="image-overlay"></div></div></td>
+    <td><div class="cont" id="mar5"><img src="m5.png" /><div class="image-overlay"></div></div></td>
+    <td><div class="cont" id="mar6"><img src="m6.png" /><div class="image-overlay"></div></div></td>
+    <td><div class="cont" id="mar7"><img src="m7.png" /><div class="image-overlay"></div></div></td>
+   </tr>
+   <tr class="sta">
+	<td><div id="s0"><img src="s0.png" /></div></td>
+	<td><div class="cont" id="sta1"><img src="s1.png" /><div class="image-overlay"></div></div></td>
+	<td><div class="cont" id="sta2"><img src="s2.png" /><div class="image-overlay"></div></div></td>
+	<td><div class="cont" id="sta3"><img src="s3.png" /><div class="image-overlay"></div></div></td>
+	<td><div class="cont" id="sta4"><img src="s4.png" /><div class="image-overlay"></div></div></td>
+	<td><div class="cont" id="sta5"><img src="s5.png" /><div class="image-overlay"></div></div></td>
+	<td><div class="cont" id="sta6"><img src="s6.png" /><div class="image-overlay"></div></div></td>
+	<td><div class="cont" id="sta7"><img src="s7.png" /><div class="image-overlay"></div></div></td>
+   </tr>
+   <tr class="tyr">
+    <td><img src="t0.png" id="t0" /></td>
+    <td><div class="cont" id="tyr1"><img src="t1.png" /><div class="image-overlay"></div></div></td>
+    <td><div class="cont" id="tyr2"><img src="t2.png" /><div class="image-overlay"></div></div></td>
+    <td><div class="cont" id="tyr3"><img src="t3.png" /><div class="image-overlay"></div></div></td>
+    <td><div class="cont" id="tyr4"><img src="t4.png" /><div class="image-overlay"></div></div></td>
+    <td><div class="cont" id="tyr5"><img src="t5.png" /><div class="image-overlay"></div></div></td>
+    <td><div class="cont" id="tyr6"><img src="t6.png" /><div class="image-overlay"></div></div></td>
+    <td><div class="cont" id="tyr7"><img src="t7.png" /><div class="image-overlay"></div></div></td>
+   </tr>
+  </table>
+  </div>
+ </body>
+</html>
